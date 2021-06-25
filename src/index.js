@@ -15,16 +15,17 @@ import Header from './header'
 
 
 ReactDOM.render(
-      <React.StrictMode>
+    <React.StrictMode>
 
-        {/* 
+        
+        {/* <Header />
         <Header />
         <Header />
-        <Header /> 
-        */}
+        <Header />  */}
+       
 
     <App />
-      { /* renderApp() */ }
+    { /* App.renderApp() */ }
 
       
       
@@ -33,7 +34,7 @@ ReactDOM.render(
       
      
 
-      </React.StrictMode>,
+    </React.StrictMode>,
   document.getElementById('root')
 );
 

@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 
+
+
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -14,6 +16,8 @@ import Header from './header'
 import ReActorsList from "./reActorList"
 
   // import ReActor from "./reActors"
+
+import ReActorNEWForm from "./reActorNEWForm"
 
 
 
@@ -36,7 +40,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         
+
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
         
+
         {/* < IMG /> */}
           {/* <h1>YURRR</h1> */}
           <img src={logo} className="App-logo" alt="logo" />
@@ -45,6 +53,16 @@ function App() {
               <img src={logo} className="App-logo" alt="logo" />
               <img src={logo} className="App-logo" alt="logo" /> 
             */}
+
+
+
+
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                <ReActorNEWForm />
+                <br/><br/><br/><br/>
+
+
 
 
           <ul>
@@ -71,7 +89,14 @@ function App() {
           </ul>
 
 
-              <ReActorsList />
+
+
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                <ReActorNEWForm />
+                <br/><br/><br/><br/>
+
+                <ReActorsList />
 
 
 
