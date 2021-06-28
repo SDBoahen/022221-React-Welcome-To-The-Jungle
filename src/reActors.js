@@ -15,12 +15,13 @@ const ReActor =(props)=>{  // props = { a: {value} }    NOT actor
             //X//  X  console.log(props.actor.a)
                 //X// console.log(props.actor)
             // console.log(props.a.actor)
+
         ////
 
 
         const j = "HEYALLZEZ" 
 
-        
+
         const clickHandler=(c)=>{  console.log(c)  }
         // const clickHandler2=(c)=>{  console.log(c)  }
 
@@ -28,7 +29,8 @@ const ReActor =(props)=>{  // props = { a: {value} }    NOT actor
     return(//<>
         
     <div> 
-
+        <br></br>
+        --------------------------------
         <h2 onClick={clickHandler}>
 
             {/* <h2 onClick={props.b}> */}
@@ -41,6 +43,8 @@ const ReActor =(props)=>{  // props = { a: {value} }    NOT actor
 
         <h4>Flatiron Student Legit Abouta Finish....WHHHHAAAATT????</h4>
         <h6> A REALLY AWESOME PERSON!</h6>
+        --------------------------------
+        <br></br>
             {/* <h2>{props.actor}</h2> */}
 
     </div>

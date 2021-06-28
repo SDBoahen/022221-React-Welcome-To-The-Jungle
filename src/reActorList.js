@@ -1,7 +1,9 @@
 import React from "react"
 
 
+
 import ReActor from "./reActors"
+import ReActorNEWForm from "./reActorNEWForm"
 
 
 
@@ -21,7 +23,7 @@ class ReActorList extends React.Component {
             "Mac", "Matt", "Mcrea", "Mike", "Nana Ama",
             "Owen", "Ryan", "Scott", "Vic", "Vincent", "Wonjin"
     
-        ] //// OBJS
+        ] ////  >>>>  OBJS
         
         ,
 
@@ -43,7 +45,9 @@ class ReActorList extends React.Component {
     stateOfOurReActorNames =()=>{ console.log("🙌Where my Actorzz Aht??🙌    ", this.state.actorAllNames) }
 
 
-        submitHandlerNEWReActor =()=>{ console.log("VVVWELCOME") }
+        // submitHandlerNEWReActor =()=>{ console.log("✨🍃🌳🙌VVVWELCOME🙌🌳🍃✨") }
+
+
 
 
     ////////
@@ -56,10 +60,18 @@ class ReActorList extends React.Component {
         
 
         // const allOurActors = this.state.actorAll.map(actor =>{ return <h2>{actor}</h2> })
-        const allOurActors = this.state.actorAll.map(  (actor)=>{  return <ReActor a={actor} b={actor}  s={this.submitHandlerNEWReActor}/> }  ) //{a: "Wonjin"}
+        const allOurActors = this.state.actorAllNames.map(  (actorName)=>{  return <ReActor a={actorName} b={actorName}  s={this.submitHandlerNEWReActor}/> }  ) //{a: "Wonjin"}
         // innerHTML `<><><><><><Re>`
         
         return(<>{allOurActors}</>);
+
+
+
+
+
+
+
+
 //   **** DIVS
 
 
@@ -68,6 +80,41 @@ class ReActorList extends React.Component {
 }
 export default ReActorList
 {/* <ReActorList /> */}
+
+
+
+
+        // return(<>{allOurActors}<ReActorNEWForm></>);
+
+        // return(<>
+        //     <div>
+        //     {allOurActors}
+        //     </div>
+        //     <div>
+        //     <ReActorNEWForm>
+        //     </div>
+        // </>); 
+        // {/* What's The Issue?? 📋🤓 */}
+        // return(<>
+        //             <div>
+        //             {allOurActors}
+        //             </div>
+        //             <div>
+        //                 <ReActorNEWForm reActorNameSUBMIT={this.submitHandlerNEWReActor}/>
+        //             </div>
+        //       </>);
+
+
+
+
+        // submitHandlerNEWReActor =(newName)=>{ console.log(`✨🍃🌳🙌VVVWELCOME ${newName.name}🙌🌳🍃✨`) }
+        // submitHandlerNEWReActor =(newName)=>{ console.log(`✨🍃🌳🙌VVVWELCOME ${newName}🙌🌳🍃✨`) }
+        // submitHandlerNEWReActor =(newName)=>{ console.log(`✨🍃🌳🙌VVVWELCOME ${newName}🙌🌳🍃✨`) 
+
+        //     this.setState({ actorAllNames: [newName, ...this.state.actorAllNames] })
+        //     this.setState({ actorAllNames: [newName, ...this.state.actorAllNames] })
+    
+        // }
 
 
 

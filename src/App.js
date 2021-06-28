@@ -22,19 +22,31 @@ import ReActorNEWForm from "./reActorNEWForm"
 
 
 
-const names = ["Sam", "Corinna", "Juan",
- 
-  "Amelia", "Andrés", "Angelo", "Bhavani V", 
-  "Carson", "Chris", "Cel", "Christian", 
-  "Elena", "Ekaynuh", "G", "Jess", "Julian",
-  "Kelvin", "Kevin J", "Kyle", "Leonetti",
-  "Mac", "Matt", "Mcrea", "Mike", "Nana Ama",
-  "Owen", "Ryan", "Scott", "Vic", "Vincent", "Wonjin"
-]
+
+
+
+
 
 
 function App() {
+
+
+  const names = [ "Sam", "Corinna", "Juan",
+   
+    "Amelia", "Andrés", "Angelo", "Bhavani V", 
+    "Carson", "Chris", "Cel", "Christian", 
+    "Elena", "Ekaynuh", "G", "Jess", "Julian",
+    "Kelvin", "Kevin J", "Kyle", "Leonetti",
+    "Mac", "Matt", "Mcrea", "Mike", "Nana Ama",
+    "Owen", "Ryan", "Scott", "Vic", "Vincent", "Wonjin"
+  ]  // In App 
+     //// NOT THE SAME AS names[] in all other Components - State is Local and NOT SHARED 📜🤓
   
+
+     //  Global/"Parent" Function
+     const treeTopAppBell =()=>{ console.log("🌳🔔diiing🎶✨") }
+  
+     
   // MakeACard
   return (
     <div className="App">
@@ -59,8 +71,11 @@ function App() {
 
                 <br/><br/><br/><br/>
                 <br/><br/><br/><br/>
-                <ReActorNEWForm />
+                <ReActorNEWForm theBell={treeTopAppBell} /> 
+                {/* a={actorName} */}
                 <br/><br/><br/><br/>
+                {/* YOU CAN'T PASSING THINGS UP  ~  'Why Fight Gravity ?🧘' */}
+                
 
 
 

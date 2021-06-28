@@ -3,6 +3,204 @@ import { Component } from "react"
 
 
 
+
+//  IN A CLASS UTILITY BELT  // 
+//
+// -  state  -  {???? lifecyle method ????} -  this  - pros-Recived/prop-Passing  //
+//
+////
+class ReActorNEWForm extends Component{  //X// DON'T NEED TO DECLARE  (props) in a  <Class Component>
+
+    state={ nameInputValue: "" }
+    //// s
+    
+
+    submitHandler=(e)=>{ e.preventDefault() }
+    onChangeHandler=(e)=>{ //console.log("typing...") 
+
+        console.log(e.target.value) 
+
+        this.setState({ [e.target.name]: e.target.value })
+
+
+        //  *  //  How Would We Clear the Form??👀 //
+        
+
+    }
+    //  local --
+    ringTheBell=()=>{
+
+        if(this.props.theBell){  this.props.theBell()  }
+            //X// this.props.treeTopAppBell()
+            //X// App.treeTopAppBell()
+
+    }  //  *** THIS IS OUT CLICK-HANDLER
+
+    ////  THIS IS KIND OF WHAT'S HAPPENING: theBell === theTreeTopBell  HERE
+
+        // f =()=>{ console.log("YAY!") }
+        // t = f
+        // t ={f}
+
+        // console.log(f)
+        // console.log(t)
+
+
+    ////////
+
+
+        // alertMe=(typingInput)=>{  if(typingInput.toLowerCase() === "sam"){ console.log("Hey-Hansome😉✨🖱") }  }
+
+
+
+        render(){ console.log(this.props);  console.log("ding!") 
+
+                // this.ringTheBell()  
+            //this.alertMe(this.state.nameInputValue)
+        
+
+        //X//  { const j = e.target.value } 
+        ////  WON'T WORK - DON'T TRY IT 😅
+    
+
+    return(<>
+    
+    <div>
+        <form onSubmit={this.submitHandler}>
+
+                {/* (e)=> this.submitHandler(e)  // FROWNED UPON */}
+
+            <input type="text" placeholder="name" value={this.state.nameInputValue} onChange={this.onChangeHandler}
+                name="nameInputValue"
+            />
+            <input type="submit" value="🌳🍃VVVWEHLCUHM TO THE JUNGLE!🌳🍃"/>
+        </form>
+        <h1 onClick={this.ringTheBell}>🔔🎋</h1>
+    </div>
+
+    </>);}
+
+}
+export default ReActorNEWForm
+
+
+
+
+// ringTheBell=()=>{ console.log(this.props)
+
+//     if(this.props.theBell){ this.props.theBell() }
+
+// }
+
+
+// onClick={this.ringTheBell}
+
+
+
+
+// submitHandler=(e)=>{ e.preventDefault() 
+
+//     console.log(this.props)
+//     // this.props.reActorNameSUBMIT()
+//
+        // this.state  !!  WHO OBJECT !!
+        //// ' WHY DON'T WE JUST PASS IN ALL OF STATE ?? 🤷🏾‍♂️
+        //// json - Body - .stringify ({})
+//     this.props.reActorNameSUBMIT(this.state.nameInputValue)
+
+// }
+
+
+
+
+
+
+
+
+// onSubmit={ }
+// (e)=>{e.preventDefault()} 
+// submitHandler=(e)=>{ e.preventDefault(); } 
+
+// changeHandler =(e)=>{ console.log(e) }
+// (e)=>{console.log(e)
+// (e)=>{console.log(e.target.value)
+
+
+
+
+// state={ name: "" }
+//     ////
+//     changeHandler =(e)=>{ console.log(e.target.value) 
+    
+//         this.setState({ [e.target.name]: e.target.value })
+
+//     }
+// name="name" />
+
+
+
+
+
+
+
+
+
+// class ReActorNEWForm extends Component{ 
+    
+
+//     render(){ return(<>
+    
+//     <div>
+//         <form>
+//             <input type="text" placeholder="name" value="" onChange={""}/>
+//             <input type="submit" value="🌳🍃VVVWEHLCUHM TO THE JUNGLE!🌳🍃"/>
+//         </form>
+//     </div>
+
+//     </>);}
+
+// }
+// export default ReActorNEWForm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // class ReActorNEWForm extends Component{ render(){ return(<></>);}
 
 //  // - state - life - this - 
@@ -103,113 +301,3 @@ import { Component } from "react"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//  IN A CLASS UTILITY BELT  // 
-//
-// -  state  -  {???? lifecyle method ????} -  this  -   -x- prop-Passing //
-//
-////
-class ReActorNEWForm extends Component{ 
-
-    state={ nameInputValue: "" }
-    
-    submitHandler=(e)=>{ e.preventDefault() }
-    onChangeHandler=(e)=>{ //console.log("typing...") 
-
-        console.log(e.target.value) 
-
-        this.setState({ [e.target.name]: e.target.value })
-        
-    }
-
-    render(){  
-        
-        // { const j = e.target.value }  
-    
-    return(<>
-    
-    <div>
-        <form onSubmit={this.submitHandler}>
-
-                {/* (e)=> this.submitHandler(e)  // FROWNED UPON */}
-
-            <input type="text" placeholder="name" value={this.state.nameInputValue} onChange={this.onChangeHandler}
-                name="nameInputValue"
-            />
-            <input type="submit" value="🌳🍃VVVWEHLCUHM TO THE JUNGLE!🌳🍃"/>
-        </form>
-    </div>
-
-    </>);}
-
-}
-export default ReActorNEWForm
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// onSubmit={ }
-// (e)=>{e.preventDefault()} 
-// submitHandler=(e)=>{ e.preventDefault(); } 
-
-// changeHandler =(e)=>{ console.log(e) }
-// (e)=>{console.log(e)
-// (e)=>{console.log(e.target.value)
-
-
-
-
-// state={ name: "" }
-//     ////
-//     changeHandler =(e)=>{ console.log(e.target.value) 
-    
-//         this.setState({ [e.target.name]: e.target.value })
-
-//     }
-// name="name" />
-
-
-
-
-
-
-
-
-
-// class ReActorNEWForm extends Component{ 
-    
-
-//     render(){ return(<>
-    
-//     <div>
-//         <form>
-//             <input type="text" placeholder="name" value="" onChange={""}/>
-//             <input type="submit" value="🌳🍃VVVWEHLCUHM TO THE JUNGLE!🌳🍃"/>
-//         </form>
-//     </div>
-
-//     </>);}
-
-// }
-// export default ReActorNEWForm
