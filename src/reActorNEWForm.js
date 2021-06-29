@@ -11,14 +11,31 @@ import { Component } from "react"
 ////
 class ReActorNEWForm extends Component{  //X// DON'T NEED TO DECLARE  (props) in a  <Class Component>
 
-    state={ nameInputValue: "" }
+    state={ nameInputValue: "" , hometown: "" 
+
+        ,
+
+        names:[]
+
+
+    }
     //// s
     
 
-    submitHandler=(e)=>{ e.preventDefault() }
+    submitHandler=(e)=>{ e.preventDefault() 
+    
+    
+        console.log("IN THE FORM - Name:  ", this.state.nameInputValue)
+            console.log("IN THE FORM - Hometown:  ", this.state.hometown)
+
+        this.props.reActorNameSUBMIT(this.state.nameInputValue)
+
+        
+    
+    }
     onChangeHandler=(e)=>{ //console.log("typing...") 
 
-        console.log(e.target.value) 
+        console.log(e.target.name, "  ::  ", e.target.value) 
 
         this.setState({ [e.target.name]: e.target.value })
 
@@ -30,7 +47,14 @@ class ReActorNEWForm extends Component{  //X// DON'T NEED TO DECLARE  (props) in
     //  local --
     ringTheBell=()=>{
 
-        if(this.props.theBell){  this.props.theBell()  }
+        
+        if(this.props.theBell){  
+
+            this.props.theBell()  
+
+        }
+
+
             //X// this.props.treeTopAppBell()
             //X// App.treeTopAppBell()
 
@@ -53,7 +77,7 @@ class ReActorNEWForm extends Component{  //X// DON'T NEED TO DECLARE  (props) in
 
 
 
-        render(){ console.log(this.props);  console.log("ding!") 
+        render(){  //console.log(this.props);  //console.log("(ding!)") 
 
                 // this.ringTheBell()  
             //this.alertMe(this.state.nameInputValue)
@@ -66,6 +90,7 @@ class ReActorNEWForm extends Component{  //X// DON'T NEED TO DECLARE  (props) in
     return(<>
     
     <div>
+
         <form onSubmit={this.submitHandler}>
 
                 {/* (e)=> this.submitHandler(e)  // FROWNED UPON */}
@@ -73,9 +98,21 @@ class ReActorNEWForm extends Component{  //X// DON'T NEED TO DECLARE  (props) in
             <input type="text" placeholder="name" value={this.state.nameInputValue} onChange={this.onChangeHandler}
                 name="nameInputValue"
             />
+            <input type="text" placeholder="hometown" value={this.state.hometown} onChange={this.onChangeHandler}
+                name="hometown"
+            />
             <input type="submit" value="🌳🍃VVVWEHLCUHM TO THE JUNGLE!🌳🍃"/>
         </form>
-        <h1 onClick={this.ringTheBell}>🔔🎋</h1>
+
+            <h1 onClick={this.ringTheBell}>🔔🎋</h1>
+            <h1                           >🍃🎋</h1>
+            <h1 onClick={this.ringTheBell}>🔔🎋</h1>
+            <h1                           >🍃🎋</h1>
+            <h1 onClick={this.ringTheBell}>🔔🎋</h1>
+            <h1                           >🍃🎋</h1>
+            <h1 onClick={this.ringTheBell}>🔔🎋</h1>
+            <h1                           >🍃🎋</h1>
+        
     </div>
 
     </>);}

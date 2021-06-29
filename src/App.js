@@ -45,6 +45,7 @@ function App() {
 
      //  Global/"Parent" Function
      const treeTopAppBell =()=>{ console.log("🌳🔔diiing🎶✨") }
+     //  !!  IF WE PASSED AN ARRAY; THAT THING IS AN ARRAY - SAME FOR FUNCTIONS
   
      
   // MakeACard
@@ -74,8 +75,45 @@ function App() {
                 <ReActorNEWForm theBell={treeTopAppBell} /> 
                 {/* a={actorName} */}
                 <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
                 {/* YOU CAN'T PASSING THINGS UP  ~  'Why Fight Gravity ?🧘' */}
                 
+
+
+
+
+          
+
+
+
+
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                {/* <ReActorNEWForm /> */}
+                <br/><br/><br/><br/>
+
+                <ReActorsList n={names} />
+                {/* name={this.name} */}
+
+
+
+
+              {/* <reActorList /> */}
+
+              {/* <Followers userID={u} />
+              <Post/> <<<< like buton image ><</like> */}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,7 +130,7 @@ function App() {
                 names.map(name =>{ return( 
                   // <>
                   <div className="Almost">
-                    <h2>{name + "!"}</h2>
+                    <h2>🍃 {name + "!"} 🍃</h2>
                     < Header />
 
                   </div>
@@ -102,28 +140,6 @@ function App() {
               }
               
           </ul>
-
-
-
-
-                <br/><br/><br/><br/>
-                <br/><br/><br/><br/>
-                <ReActorNEWForm />
-                <br/><br/><br/><br/>
-
-                <ReActorsList />
-
-
-
-
-              {/* <reActorList /> */}
-
-              {/* <Followers userID={u} />
-              <Post/> <<<< like buton image ><</like> */}
-
-
-
-
 
 
 

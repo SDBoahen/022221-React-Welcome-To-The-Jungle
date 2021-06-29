@@ -36,7 +36,7 @@ const ReActor =(props)=>{  // props = { a: {value} }    NOT actor
             {/* <h2 onClick={props.b}> */}
             {/* .then(=>console.log) */}
             {/* <h2> */}
-            {props.b}
+            🌿{props.b}🌿
 
         </h2>
         {/* <h2 onClick={function(){console.log("bill Murray 2")> HEY </h2> */}
