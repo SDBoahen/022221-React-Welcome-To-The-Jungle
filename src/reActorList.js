@@ -153,10 +153,11 @@ class ReActorList extends React.Component{
     }
 
     
-    render(){  this.stateOfState(); this.stateOfOurReActors(); this.stateOfOurReActorNames();
+    render(){  //this.stateOfState(); this.stateOfOurReActors(); this.stateOfOurReActorNames();
 
-        console.log(this.props)
+        //console.log(this.props)
 
+        
         //X// this.pleaseActuallyWorkSoWeCanMoveOn();
         //X//  this.setState({ reActorAllNames: this.props.n })
 

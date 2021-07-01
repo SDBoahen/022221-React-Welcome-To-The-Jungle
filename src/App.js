@@ -8,6 +8,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 
+
+
+import LifecyclesInTheJungle from './lifecyclesInTheJungle'
+
+
 import Header from './header'
 
 
@@ -51,8 +56,27 @@ function App() {
   // MakeACard
   return (
     <div className="App">
+
+
+
+
+      {/* < LifecyclesInTheJungle lifecycleNewName={"Mas💫"}/> */}
+        < LifecyclesInTheJungle lifecycleNewName={123}/>
+      {/* < LifecyclesInTheJungle /> */}
+
+
+
+
+
+
+
+
+
+
       <header className="App-header">
+
         
+
 
         <br/><br/><br/><br/>
         <br/><br/><br/><br/>
