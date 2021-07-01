@@ -7,6 +7,16 @@ import './index.css';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//  ***  LOOK INTO  ***  //
+
+
+import { BrowserRouter } from 'react-router-dom'
+  // import {BrowserRouter as Portal} from 'react-router-dom'
+  // import {BrowserRouter as Router} from 'react-router-dom'
+//  ***  DISCLAIMER  ***  //
+// Router
+
+
 
 
 import Header from './header'
@@ -16,19 +26,41 @@ import Header from './header'
 
 ReactDOM.render(
     <React.StrictMode>
-
         
+
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>   
+
+
+
+
+    {/* <ReRouter>
+      <App />
+    </ReRouter>    */}
+
+
+
+    {/* <Portal>
+      <App />
+    </Portal>    */}
+
+      
+
+
+
+
+
+      {/* <App /> */}
+      { /* App.renderApp() */ }
+      
+
         {/* <Header />
         <Header />
         <Header />
         <Header />  */}
-       
 
-    <App />
-    { /* App.renderApp() */ }
 
-      
-      
       {/* <App />
       <App />  */}
       

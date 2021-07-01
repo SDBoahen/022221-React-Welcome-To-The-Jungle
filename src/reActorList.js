@@ -1,5 +1,7 @@
 import React from "react"
 
+import {BrowserRouter, Switch} from 'react-router-dom'
+
 
 
 import ReActor from "./reActors"
@@ -122,6 +124,8 @@ class ReActorList extends React.Component{
 
 
             console.log(this.state.reActorAllNames)
+
+                // this.pleaseActuallyWorkSoWeCanMoveOn()
             
         } //  ~  DOMContentLoaded
         //  ***  HIGHLIGHT OTHER USES FOR OUR COMPONENT DID MOUNT 
@@ -158,7 +162,7 @@ class ReActorList extends React.Component{
         //console.log(this.props)
 
         
-        //X// this.pleaseActuallyWorkSoWeCanMoveOn();
+        //X//  this.pleaseActuallyWorkSoWeCanMoveOn();
         //X//  this.setState({ reActorAllNames: this.props.n })
 
 
@@ -173,16 +177,21 @@ class ReActorList extends React.Component{
 
         return(<>
 
-                    {/* WOULD WANT SPEARATE DUVES FOR STYLING */}
-                    <div> 
-                        <ReActorNEWForm reActorNameSUBMIT={this.submitHandlerNEWReActor}/>
-                    </div>
-                        <div>
-                            {allOurActors}
+                    {/*  GO EXAMPLE FOR NESTED ROUTES THOUGH  */}
+                    {/* <Switch> */}
+                        <BrowserRouter path="/whowegot">
+                        {/* WOULD WANT SPEARATE DUVES FOR STYLING */}
+                        <div> 
+                            <ReActorNEWForm reActorNameSUBMIT={this.submitHandlerNEWReActor}/>
                         </div>
-                    <div> 
-                        <ReActorNEWForm reActorNameSUBMIT={this.submitHandlerNEWReActor}/>
-                    </div>
+                            <div>
+                                {allOurActors}
+                            </div>
+                        <div> 
+                            <ReActorNEWForm reActorNameSUBMIT={this.submitHandlerNEWReActor}/>
+                        </div>
+                        </BrowserRouter>
+                    {/* </Switch> */}
 
         </>);
 

@@ -6,6 +6,8 @@ import './App.css';
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import {BrowserRouter, Switch} from 'react-router-dom'
+//  ***  DISCLAIMER  ***  //
 
 
 
@@ -32,11 +34,14 @@ import ReActorNEWForm from "./reActorNEWForm"
 
 
 
+// function App(props) {
+//   //  ***  >>>>  Class  >>>> 
 
-function App() {
+  class App extends React.Component {
 
 
-  const names = [ "Sam", "Corinna", "Juan",
+  //const 
+  names = [ "Sam", "Corinna", "Juan",
    
     "Amelia", "Andrés", "Angelo", "Bhavani V", 
     "Carson", "Chris", "Cel", "Christian", 
@@ -49,14 +54,19 @@ function App() {
   
 
      //  Global/"Parent" Function
-     const treeTopAppBell =()=>{ console.log("🌳🔔diiing🎶✨") }
+
+     //const 
+     treeTopAppBell =()=>{ console.log("🌳🔔diiing🎶✨") }
      //  !!  IF WE PASSED AN ARRAY; THAT THING IS AN ARRAY - SAME FOR FUNCTIONS
   
-     
+  
+  render(){
   // MakeACard
   return (
     <div className="App">
 
+
+      <h1>  WILL SOON BE A NAVBAR - YAAAAAAAAY!  </h1>
 
 
 
@@ -77,9 +87,20 @@ function App() {
 
         
 
+{/* 
 
-        <br/><br/><br/><br/>
-        <br/><br/><br/><br/>
+  OUR ONLY PATHS AT THE MOMENT
+
+
+  path="/"  >  "homepage"
+
+  path="/ringthebell"   > the Form with Bell ding
+
+  path="/reactors"
+
+
+*/}
+
         
 
         {/* < IMG /> */}
@@ -93,10 +114,15 @@ function App() {
 
 
 
-
+                <Switch>
+                <BrowserRouter path="/ringthebell">
+                  {/* exact */}
+                
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>  
                 <br/><br/><br/><br/>
                 <br/><br/><br/><br/>
-                <ReActorNEWForm theBell={treeTopAppBell} /> 
+                <ReActorNEWForm theBell={this.treeTopAppBell} /> 
                 {/* a={actorName} */}
                 <br/><br/><br/><br/>
                 <br/><br/><br/><br/>
@@ -104,6 +130,9 @@ function App() {
                 <br/><br/><br/><br/>
                 {/* YOU CAN'T PASSING THINGS UP  ~  'Why Fight Gravity ?🧘' */}
                 
+                </BrowserRouter>
+                </Switch>
+                  
 
 
 
@@ -111,17 +140,33 @@ function App() {
           
 
 
+                <Switch>
+                  <BrowserRouter path="/reactors">
+                  <br/><br/><br/><br/>
+                  <br/><br/><br/><br/>
+                  {/* <ReActorNEWForm /> */}
+                  <br/><br/><br/><br/>
+
+                  <ReActorsList n={this.names} />
+                  {/* name={this.name} */}
 
 
-                <br/><br/><br/><br/>
-                <br/><br/><br/><br/>
-                {/* <ReActorNEWForm /> */}
-                <br/><br/><br/><br/>
+                  </BrowserRouter>
+                </Switch>
 
-                <ReActorsList n={names} />
-                {/* name={this.name} */}
+                {/* 
+                
 
+                  <SW:url>  ON : OFF
+                  ReActorList
+                  L>  
+                      <SW:url> OFF : ON
+                        ReActors
+                      </SW>
+                  </SW>
 
+                
+                */}
 
 
               {/* <reActorList /> */}
@@ -142,28 +187,45 @@ function App() {
 
 
 
-          <ul>
-              {names.map(name =>{ return( name + "!") })}
+          <Switch>
+            <BrowserRouter exact path="/">
 
-              {/* {
-                names.map(name =>{ return name + "!" })
-              } */}
+            <h1> OUR SOFT-HOMEPAGE YAY! WELCOME! </h1>
 
-              < Header />
-              {
-                names.map(name =>{ return( 
-                  // <>
-                  <div className="Almost">
-                    <h2>🍃 {name + "!"} 🍃</h2>
-                    < Header />
+            <ul>
 
-                  </div>
-                  // </>
-                  ) 
-                })
-              }
-              
-          </ul>
+
+                {this.names.map(name =>{ return( name + "!") })}
+
+                {/* {
+                  names.map(name =>{ return name + "!" })
+                } */}
+
+                < Header />
+                {
+                  this.names.map(name =>{ return( 
+                    // <>
+                    <div className="Almost">
+                      <h2>🍃 {name + "!"} 🍃</h2>
+                      < Header />
+
+                    </div>
+                    // </>
+                    ) 
+                  })
+                }
+            </ul>
+
+            </BrowserRouter>
+          </Switch>
+                
+
+
+
+
+
+
+
 
 
 
@@ -214,7 +276,8 @@ function App() {
     </div> 
 
 
-  );  // CLOSING OUT  return( ---  );
+    );  // CLOSING OUT  return( ---  );
+  }  // CLOSING OUT     render(){ --- }
 }  //  CLOSING OUT OUR  class {  ---  }
 export default App;
 // <App />
