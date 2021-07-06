@@ -7,7 +7,7 @@ const ReActor =(props)=>{  // props = { a: {value} }    NOT actor
     //console.log(props)
 
 
-        //  Use Messing Around to Guage What in props
+        //  Us Messing Around to Guage What in props
             
             console.log(props)
 

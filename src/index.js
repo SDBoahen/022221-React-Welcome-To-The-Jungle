@@ -17,6 +17,10 @@ import { BrowserRouter } from 'react-router-dom'
 // Router
 
 
+import { Provider } from "react-redux"
+import store from "./redux/store"
+
+
 
 
 import Header from './header'
@@ -27,10 +31,12 @@ import Header from './header'
 ReactDOM.render(
     <React.StrictMode>
         
-
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>   
+      
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>   
+    </Provider>
 
 
 
